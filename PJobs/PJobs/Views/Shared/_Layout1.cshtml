@@ -1,0 +1,157 @@
+﻿@{
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
+
+    <title>PJobs | Find your perfect jobs in the world</title>
+
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader loaded">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky background-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">P<em>Jobs</em></a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="/home">Trang chủ</a></li>
+                            <li><a href="/candidate" class="active">Ứng viên</a></li>
+
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Khác</a>
+
+                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(12px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                    <a class="dropdown-item" href="/aboutus">Giới thiệu công ty</a>
+                                    <a class="dropdown-item" href="/blog">Blog</a>
+                                    <a class="dropdown-item" href="/home/contact">Phản hồi</a>
+                                </div>
+                            </li>
+                            <li class="dropdown"><partial name="_LoginPartial" /></li>
+                        </ul>
+                       
+                        <a class="menu-trigger">
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <!-- Grid container -->
+        <div class="container p-2">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">CÔNG TY PJOBS</h5>
+
+                    <p>
+                        Cổng thông tin cung cấp các tin tuyển dụng việc làm của doanh nghiệp đến cá nhân. Yêu cầu cơ bản để các thiết kế website này hoạt động hiệu quả là thông tin chuẩn, chính xác và nhanh nhạy. Xin hãy tin tưởng trang web của chúng tôi!
+                    </p>
+                    <img src="~/images/jobpeople.jpg" style="width:400px">
+
+
+                </div>
+
+
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">LIÊN HỆ</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <p>Email: pjobscompany@gmail.com</p>
+                        </li>
+                        <li>
+                            <p>SĐT 1: 090-619-4433</p>
+                        </li>
+                        <li>
+                            <p>SĐT 2: 070-356-2459</p>
+                        </li>
+                        <li>
+                            <p>Địa chỉ: Tầng 77 Tòa Nhà Bitexco 2 Hải Triều, Bến Nghé, Quận 1</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">PHƯƠNG TIỆN</h5>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li style="color:white"><a style="color:white; text-decoration:none" href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+                        <br/>
+                        <li style="color:white"><a style="color:white; text-decoration:none" href="https://workspace.google.com/intl/vi/"><i class="fab fa-google-plus-square fa-3x"></i></a></li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="~/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="~/js/scrollreveal.min.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/jquery.counterup.min.js"></script>
+    <script src="~/js/imgfix.min.js"></script>
+    <script src="~/js/mixitup.js"></script>
+    <script src="~/js/accordions.js"></script>
+
+    <!-- Global Init -->
+    <script src="~/js/custom.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

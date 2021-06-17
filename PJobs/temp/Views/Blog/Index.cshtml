@@ -1,0 +1,111 @@
+﻿@model IEnumerable<PJobs.Repository.BlogJoinJob>
+
+@{
+    Layout = "_Layout1";
+}
+
+<!-- ***** Call to Action Start ***** -->
+<section class="section section-bg" id="call-to-action" style="background-image: url(~/wwwroot/images/teles);">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="cta-content">
+                    <br>
+                    <br>
+                    <h2>Toàn bộ <em>Blog</em></h2>
+                    <p>Thông tin những kiến thức mới, đời sống, chia sẻ kinh nghiệm liên quan đến ngành nghề</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Call to Action End ***** -->
+<!-- ***** Fleet Starts ***** -->
+<section class="section" id="our-classes">
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-lg-8">
+                @foreach (var item in Model.Take(1))
+                {
+                    <section class="tabs-content">
+
+                        <article>
+
+                            <img src="~/images/@item.AnhNgoai" alt="">
+                            <h4>@item.TenBlog</h4>
+
+                            <p><i class="fa fa-user"></i> PJobs &nbsp;|&nbsp; <i class="fa fa-calendar"></i> @item.NgayDangBlog &nbsp;|&nbsp; <i class="fa fa-comments"></i>  15 comments</p>
+
+                            <p>@item.NoiDungBlog</p>
+                            <div class="main-button">
+                                <a href="/blog/blogdetails/@item.MaBlog">Continue Reading</a>
+                            </div>
+                        </article>
+                    </section>}
+                </div>
+
+            <div class="col-lg-4">
+                <h5 class="h5">Search</h5>
+
+                <select class="form-control" title="Hãy chọn nghề nghiệp của bạn">
+                    <option>Nghề nghiệp</option>
+                
+                        @foreach (var item in Model)
+                        {
+                            <option>@item.TenNghe</option>
+                        }
+
+                </select>
+
+                <h5 class="h5"></h5>
+                <div class="panel panel-primary" id="result_panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Result List</h4>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group" style="max-height: 550px; margin-bottom: 10px; overflow: scroll; -webkit-overflow-scrolling: touch;align-content: center;">
+                            @foreach (var item in Model)
+                            {
+                                <li class="list-group-item">
+                                    <article>
+                                        <img src="~/images/@item.AnhNgoai" style="width:300px; padding:5px;">
+                                        <h6>@item.TenBlog</h6>
+                                        <p><i class="fa fa-user"></i> PJobs &nbsp;|&nbsp; <i class="fa fa-calendar"></i> @item.NgayDangBlog &nbsp;|&nbsp;</p>
+                                        <div class="main-button">
+                                            <a href="/blog/blogdetails/@item.MaBlog">Continue Reading</a>
+                                        </div>
+                                    </article>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ***** Fleet Ends ***** -->
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/mixitup.js"></script>
+<script src="assets/js/accordions.js"></script>
+
+<!-- Global Init -->
+<script src="assets/js/custom.js"></script>
+

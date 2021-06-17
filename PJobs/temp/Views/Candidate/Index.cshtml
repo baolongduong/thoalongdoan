@@ -1,0 +1,41 @@
+﻿@model List<UngVien>
+@{
+    Layout = "_Layout1";
+}
+
+<section class="section" id="trainers">
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="trainer-item">
+                        <div class="image-thumb">
+                            <img src="~/images/@item.AnhDaiDien" alt="">
+                        </div>
+                        <div class="down-content">
+                            <span>@item.HoTen</span>
+                            <ul>
+                                @foreach (var kn in item.UngVienKiNangs)
+                                {
+                                    <li>@kn.MaKiNangNavigation.TenKiNang</li>
+                                }
+                            </ul>
+                            <p>@item.DiaChiChiTiet</p>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+

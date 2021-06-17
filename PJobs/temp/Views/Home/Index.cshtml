@@ -1,0 +1,53 @@
+﻿
+@model  List<TinTuyenDung>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout1";
+}
+
+<!-- ***** Cars Starts ***** -->
+<section class="section" id="trainers">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                    <h2>The latest <em>Jobs</em></h2>
+                    <img src="assets/images/line-dec.png" alt="">
+                    <p>Những công việc được cập nhật gần đây với mức lương vô cùng hấp dẫn!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          @foreach (var item in Model)
+          {
+
+
+            <div class="col-lg-4">
+                <div class="trainer-item">
+                    <div class="image-thumb">
+                        <img src="~/images/@item.Hinhanh" alt="">
+                    </div>
+                    <div class="down-content">
+                        <span> @item.MucLuong </span>
+
+                        <h4>@item.Tieude</h4>
+
+                        <p>Medical &nbsp;/&nbsp; Health Jobs</p>
+
+                        <ul class="social-icons">
+                            <li><a href="#">+ View More</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+          }
+        </div>
+
+        <br>
+
+        <div class="main-button text-center">
+            <a href="/job">View Jobs</a>
+        </div>
+    </div>
+</section>
+<!-- ***** Cars Ends ***** -->
